@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/LyricTian/gin-admin/internal/app/config"
-	"github.com/LyricTian/gin-admin/internal/app/middleware"
-	"github.com/LyricTian/gin-admin/internal/app/routers/api"
-	"github.com/LyricTian/gin-admin/pkg/logger"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/config"
+	"github.com/jiaoww/gin-admin/internal/app/middleware"
+	"github.com/jiaoww/gin-admin/internal/app/routers/api"
+	"github.com/jiaoww/gin-admin/pkg/logger"
 	"go.uber.org/dig"
 )
 

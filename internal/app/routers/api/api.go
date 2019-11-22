@@ -1,11 +1,11 @@
 package api
 
 import (
-	"github.com/LyricTian/gin-admin/internal/app/middleware"
-	"github.com/LyricTian/gin-admin/internal/app/routers/api/ctl"
-	"github.com/LyricTian/gin-admin/pkg/auth"
 	"github.com/casbin/casbin/v2"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/middleware"
+	"github.com/jiaoww/gin-admin/internal/app/routers/api/ctl"
+	"github.com/jiaoww/gin-admin/pkg/auth"
 	"go.uber.org/dig"
 )
 

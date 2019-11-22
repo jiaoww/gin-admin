@@ -79,8 +79,8 @@ func getTraceID() string {
 
 type (
 	traceIDContextKey struct{}
-	spanIDContextKey  struct{}
-	userIDContextKey  struct{}
+	spanIDContextKey struct{}
+	userIDContextKey struct{}
 )
 
 // NewTraceIDContext 创建跟踪ID上下文

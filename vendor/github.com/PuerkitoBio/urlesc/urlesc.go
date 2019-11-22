@@ -36,7 +36,7 @@ func shouldEscape(c byte, mode encoding) bool {
 		return false
 
 	// §2.2 Reserved characters (reserved)
-	case ':', '/', '?', '#', '[', ']', '@', // gen-delims
+	case ':', '/', '?', '#', '[', ']', '@',                     // gen-delims
 		'!', '$', '&', '\'', '(', ')', '*', '+', ',', ';', '=': // sub-delims
 		// Different sections of the URL allow a few of
 		// the reserved characters to appear unescaped.

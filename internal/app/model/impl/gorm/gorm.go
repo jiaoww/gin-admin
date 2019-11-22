@@ -3,10 +3,10 @@ package gorm
 import (
 	"time"
 
-	"github.com/LyricTian/gin-admin/internal/app/config"
-	"github.com/LyricTian/gin-admin/internal/app/model"
-	"github.com/LyricTian/gin-admin/internal/app/model/impl/gorm/internal/entity"
-	imodel "github.com/LyricTian/gin-admin/internal/app/model/impl/gorm/internal/model"
+	"github.com/jiaoww/gin-admin/internal/app/config"
+	"github.com/jiaoww/gin-admin/internal/app/model"
+	"github.com/jiaoww/gin-admin/internal/app/model/impl/gorm/internal/entity"
+	imodel "github.com/jiaoww/gin-admin/internal/app/model/impl/gorm/internal/model"
 	"github.com/jinzhu/gorm"
 	"go.uber.org/dig"
 

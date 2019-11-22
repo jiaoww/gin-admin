@@ -3,8 +3,8 @@ package app
 import (
 	"github.com/LyricTian/captcha"
 	"github.com/LyricTian/captcha/store"
-	"github.com/LyricTian/gin-admin/internal/app/config"
-	"github.com/LyricTian/gin-admin/pkg/logger"
+	"github.com/jiaoww/gin-admin/internal/app/config"
+	"github.com/jiaoww/gin-admin/pkg/logger"
 )
 
 // InitCaptcha 初始化图形验证码

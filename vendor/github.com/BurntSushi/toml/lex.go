@@ -11,7 +11,7 @@ type itemType int
 
 const (
 	itemError itemType = iota
-	itemNIL            // used in the parser to indicate no type
+	itemNIL    // used in the parser to indicate no type
 	itemEOF
 	itemText
 	itemString
@@ -22,7 +22,7 @@ const (
 	itemInteger
 	itemFloat
 	itemDatetime
-	itemArray // the start of an array
+	itemArray  // the start of an array
 	itemArrayEnd
 	itemTableStart
 	itemTableEnd

@@ -3,11 +3,11 @@ package internal
 import (
 	"context"
 
-	"github.com/LyricTian/gin-admin/internal/app/config"
-	icontext "github.com/LyricTian/gin-admin/internal/app/context"
-	"github.com/LyricTian/gin-admin/internal/app/model"
-	"github.com/LyricTian/gin-admin/internal/app/schema"
-	"github.com/LyricTian/gin-admin/pkg/util"
+	"github.com/jiaoww/gin-admin/internal/app/config"
+	icontext "github.com/jiaoww/gin-admin/internal/app/context"
+	"github.com/jiaoww/gin-admin/internal/app/model"
+	"github.com/jiaoww/gin-admin/internal/app/schema"
+	"github.com/jiaoww/gin-admin/pkg/util"
 )
 
 // GetRootUser 获取root用户

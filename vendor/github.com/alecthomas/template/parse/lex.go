@@ -43,31 +43,31 @@ const (
 	itemComplex                      // complex constant (1+2i); imaginary is just a number
 	itemColonEquals                  // colon-equals (':=') introducing a declaration
 	itemEOF
-	itemField        // alphanumeric identifier starting with '.'
-	itemIdentifier   // alphanumeric identifier not starting with '.'
-	itemLeftDelim    // left action delimiter
-	itemLeftParen    // '(' inside action
-	itemNumber       // simple number, including imaginary
-	itemPipe         // pipe symbol
-	itemRawString    // raw quoted string (includes quotes)
-	itemRightDelim   // right action delimiter
-	itemElideNewline // elide newline after right delim
-	itemRightParen   // ')' inside action
-	itemSpace        // run of spaces separating arguments
-	itemString       // quoted string (includes quotes)
-	itemText         // plain text
-	itemVariable     // variable starting with '$', such as '$' or  '$1' or '$hello'
+	itemField         // alphanumeric identifier starting with '.'
+	itemIdentifier    // alphanumeric identifier not starting with '.'
+	itemLeftDelim     // left action delimiter
+	itemLeftParen     // '(' inside action
+	itemNumber        // simple number, including imaginary
+	itemPipe          // pipe symbol
+	itemRawString     // raw quoted string (includes quotes)
+	itemRightDelim    // right action delimiter
+	itemElideNewline  // elide newline after right delim
+	itemRightParen    // ')' inside action
+	itemSpace         // run of spaces separating arguments
+	itemString        // quoted string (includes quotes)
+	itemText          // plain text
+	itemVariable      // variable starting with '$', such as '$' or  '$1' or '$hello'
 	// Keywords appear after all the rest.
-	itemKeyword  // used only to delimit the keywords
-	itemDot      // the cursor, spelled '.'
-	itemDefine   // define keyword
-	itemElse     // else keyword
-	itemEnd      // end keyword
-	itemIf       // if keyword
-	itemNil      // the untyped nil constant, easiest to treat as a keyword
-	itemRange    // range keyword
-	itemTemplate // template keyword
-	itemWith     // with keyword
+	itemKeyword   // used only to delimit the keywords
+	itemDot       // the cursor, spelled '.'
+	itemDefine    // define keyword
+	itemElse      // else keyword
+	itemEnd       // end keyword
+	itemIf        // if keyword
+	itemNil       // the untyped nil constant, easiest to treat as a keyword
+	itemRange     // range keyword
+	itemTemplate  // template keyword
+	itemWith      // with keyword
 )
 
 var key = map[string]itemType{

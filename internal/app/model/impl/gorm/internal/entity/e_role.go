@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/LyricTian/gin-admin/internal/app/schema"
+	"github.com/jiaoww/gin-admin/internal/app/schema"
 	"github.com/jinzhu/gorm"
 )
 

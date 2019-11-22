@@ -6,10 +6,10 @@ import (
 
 // 定义全局上下文中的键
 type (
-	transCtx     struct{}
+	transCtx struct{}
 	transLockCtx struct{}
-	userIDCtx    struct{}
-	traceIDCtx   struct{}
+	userIDCtx struct{}
+	traceIDCtx struct{}
 )
 
 // NewTrans 创建事务的上下文

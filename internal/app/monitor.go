@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/LyricTian/gin-admin/internal/app/config"
 	"github.com/google/gops/agent"
+	"github.com/jiaoww/gin-admin/internal/app/config"
 )
 
 // InitMonitor 初始化服务监控

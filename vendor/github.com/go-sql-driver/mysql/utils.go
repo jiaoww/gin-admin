@@ -299,12 +299,12 @@ func parseBinaryDateTime(num uint64, data []byte, loc *time.Location) (driver.Va
 		), nil
 	case 11:
 		return time.Date(
-			int(binary.LittleEndian.Uint16(data[:2])), // year
-			time.Month(data[2]),                       // month
-			int(data[3]),                              // day
-			int(data[4]),                              // hour
-			int(data[5]),                              // minutes
-			int(data[6]),                              // seconds
+			int(binary.LittleEndian.Uint16(data[:2])),        // year
+			time.Month(data[2]),                              // month
+			int(data[3]),                                     // day
+			int(data[4]),                                     // hour
+			int(data[5]),                                     // minutes
+			int(data[6]),                                     // seconds
 			int(binary.LittleEndian.Uint32(data[7:11]))*1000, // nanoseconds
 			loc,
 		), nil
@@ -565,8 +565,8 @@ func readLengthEncodedInteger(b []byte) (uint64, bool, int) {
 	// 254: value of following 8
 	case 0xfe:
 		return uint64(b[1]) | uint64(b[2])<<8 | uint64(b[3])<<16 |
-				uint64(b[4])<<24 | uint64(b[5])<<32 | uint64(b[6])<<40 |
-				uint64(b[7])<<48 | uint64(b[8])<<56,
+			uint64(b[4])<<24 | uint64(b[5])<<32 | uint64(b[6])<<40 |
+			uint64(b[7])<<48 | uint64(b[8])<<56,
 			false, 9
 	}
 

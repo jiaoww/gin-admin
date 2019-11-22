@@ -24,9 +24,9 @@ definitions:
         description: 状态(1:启用 2:停用)
         type: integer
     required:
-    - code
-    - name
-    - status
+      - code
+      - name
+      - status
     type: object
   schema.HTTPError:
     properties:
@@ -71,10 +71,10 @@ definitions:
         description: 用户名
         type: string
     required:
-    - captcha_code
-    - captcha_id
-    - password
-    - user_name
+      - captcha_code
+      - captcha_id
+      - password
+      - user_name
     type: object
   schema.LoginTokenInfo:
     properties:
@@ -129,7 +129,7 @@ definitions:
         description: 排序值
         type: integer
     required:
-    - name
+      - name
     type: object
   schema.MenuAction:
     properties:
@@ -223,7 +223,7 @@ definitions:
         description: 排序值
         type: integer
     required:
-    - name
+      - name
     type: object
   schema.Role:
     properties:
@@ -250,7 +250,7 @@ definitions:
         description: 排序值
         type: integer
     required:
-    - name
+      - name
     type: object
   schema.RoleMenu:
     properties:
@@ -295,8 +295,8 @@ definitions:
         description: 旧密码(md5加密)
         type: string
     required:
-    - new_password
-    - old_password
+      - new_password
+      - old_password
     type: object
   schema.User:
     properties:
@@ -332,9 +332,9 @@ definitions:
         description: 用户名
         type: string
     required:
-    - real_name
-    - status
-    - user_name
+      - real_name
+      - status
+      - user_name
     type: object
   schema.UserLoginInfo:
     properties:
@@ -404,34 +404,34 @@ paths:
   /api/v1/demos:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - default: 1
-        description: 分页索引
-        in: query
-        name: current
-        required: true
-        type: integer
-      - default: 10
-        description: 分页大小
-        in: query
-        name: pageSize
-        required: true
-        type: integer
-      - description: 编号
-        in: query
-        name: code
-        type: string
-      - description: 名称
-        in: query
-        name: name
-        type: string
-      - description: 状态(1:启用 2:停用)
-        in: query
-        name: status
-        type: integer
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - default: 1
+          description: 分页索引
+          in: query
+          name: current
+          required: true
+          type: integer
+        - default: 10
+          description: 分页大小
+          in: query
+          name: pageSize
+          required: true
+          type: integer
+        - description: 编号
+          in: query
+          name: code
+          type: string
+        - description: 名称
+          in: query
+          name: name
+          type: string
+        - description: 状态(1:启用 2:停用)
+          in: query
+          name: status
+          type: integer
       responses:
         "200":
           description: 查询结果：{list:列表数据,pagination:{current:页索引,pageSize:页大小,total:总数量}}
@@ -449,20 +449,20 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询数据
       tags:
-      - Demo
+        - Demo
     post:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 创建数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Demo'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 创建数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Demo'
+            type: object
       responses:
         "200":
           description: OK
@@ -482,19 +482,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 创建数据
       tags:
-      - Demo
+        - Demo
   /api/v1/demos/{id}:
     delete:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -510,18 +510,18 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 删除数据
       tags:
-      - Demo
+        - Demo
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: OK
@@ -541,25 +541,25 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询指定数据
       tags:
-      - Demo
+        - Demo
     put:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: 更新数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Demo'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: 更新数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Demo'
+            type: object
       responses:
         "200":
           description: OK
@@ -579,19 +579,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 更新数据
       tags:
-      - Demo
+        - Demo
   /api/v1/demos/{id}/disable:
     patch:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -607,19 +607,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 禁用数据
       tags:
-      - Demo
+        - Demo
   /api/v1/demos/{id}/enable:
     patch:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -635,38 +635,38 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 启用数据
       tags:
-      - Demo
+        - Demo
   /api/v1/menus:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - default: 1
-        description: 分页索引
-        in: query
-        name: current
-        required: true
-        type: integer
-      - default: 10
-        description: 分页大小
-        in: query
-        name: pageSize
-        required: true
-        type: integer
-      - description: 名称
-        in: query
-        name: name
-        type: string
-      - description: 隐藏菜单(0:不隐藏 1:隐藏)
-        in: query
-        name: hidden
-        type: integer
-      - description: 父级ID
-        in: query
-        name: parentID
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - default: 1
+          description: 分页索引
+          in: query
+          name: current
+          required: true
+          type: integer
+        - default: 10
+          description: 分页大小
+          in: query
+          name: pageSize
+          required: true
+          type: integer
+        - description: 名称
+          in: query
+          name: name
+          type: string
+        - description: 隐藏菜单(0:不隐藏 1:隐藏)
+          in: query
+          name: hidden
+          type: integer
+        - description: 父级ID
+          in: query
+          name: parentID
+          type: string
       responses:
         "200":
           description: 查询结果：{list:列表数据,pagination:{current:页索引,pageSize:页大小,total:总数量}}
@@ -684,20 +684,20 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询数据
       tags:
-      - 菜单管理
+        - 菜单管理
     post:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 创建数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Menu'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 创建数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Menu'
+            type: object
       responses:
         "200":
           description: OK
@@ -717,22 +717,22 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 创建数据
       tags:
-      - 菜单管理
+        - 菜单管理
   /api/v1/menus.tree:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 是否包含动作数据(1是)
-        in: query
-        name: includeActions
-        type: integer
-      - description: 是否包含资源数据(1是)
-        in: query
-        name: includeResources
-        type: integer
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 是否包含动作数据(1是)
+          in: query
+          name: includeActions
+          type: integer
+        - description: 是否包含资源数据(1是)
+          in: query
+          name: includeResources
+          type: integer
       responses:
         "200":
           description: 查询结果：{list:列表数据}
@@ -750,19 +750,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询菜单树
       tags:
-      - 菜单管理
+        - 菜单管理
   /api/v1/menus/{id}:
     delete:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -778,18 +778,18 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 删除数据
       tags:
-      - 菜单管理
+        - 菜单管理
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: OK
@@ -809,25 +809,25 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询指定数据
       tags:
-      - 菜单管理
+        - 菜单管理
     put:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: 更新数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Menu'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: 更新数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Menu'
+            type: object
       responses:
         "200":
           description: OK
@@ -847,14 +847,14 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 更新数据
       tags:
-      - 菜单管理
+        - 菜单管理
   /api/v1/pub/current/menutree:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
       responses:
         "200":
           description: 查询结果：{list:菜单树}
@@ -870,21 +870,21 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询当前用户菜单树
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/current/password:
     put:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 请求参数
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.UpdatePasswordParam'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 请求参数
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.UpdatePasswordParam'
+            type: object
       responses:
         "200":
           description: '{status:OK}'
@@ -904,14 +904,14 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 更新个人密码
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/current/user:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
       responses:
         "200":
           description: OK
@@ -927,17 +927,17 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 获取当前用户信息
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/login:
     post:
       parameters:
-      - description: 请求参数
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.LoginParam'
-          type: object
+        - description: 请求参数
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.LoginParam'
+            type: object
       responses:
         "200":
           description: OK
@@ -953,21 +953,21 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 用户登录
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/login/captcha:
     get:
       parameters:
-      - description: 验证码ID
-        in: query
-        name: id
-        required: true
-        type: string
-      - description: 重新加载
-        in: query
-        name: reload
-        type: string
+        - description: 验证码ID
+          in: query
+          name: id
+          required: true
+          type: string
+        - description: 重新加载
+          in: query
+          name: reload
+          type: string
       produces:
-      - image/png
+        - image/png
       responses:
         "200":
           description: 图形验证码
@@ -981,7 +981,7 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 响应图形验证码
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/login/captchaid:
     get:
       responses:
@@ -991,7 +991,7 @@ paths:
             $ref: '#/definitions/schema.LoginCaptcha'
       summary: 获取验证码信息
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/login/exit:
     post:
       responses:
@@ -1001,14 +1001,14 @@ paths:
             $ref: '#/definitions/schema.HTTPStatus'
       summary: 用户登出
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/pub/refresh-token:
     post:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
       responses:
         "200":
           description: OK
@@ -1024,30 +1024,30 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 刷新令牌
       tags:
-      - 登录管理
+        - 登录管理
   /api/v1/roles:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - default: 1
-        description: 分页索引
-        in: query
-        name: current
-        required: true
-        type: integer
-      - default: 10
-        description: 分页大小
-        in: query
-        name: pageSize
-        required: true
-        type: integer
-      - description: 角色名称(模糊查询)
-        in: query
-        name: name
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - default: 1
+          description: 分页索引
+          in: query
+          name: current
+          required: true
+          type: integer
+        - default: 10
+          description: 分页大小
+          in: query
+          name: pageSize
+          required: true
+          type: integer
+        - description: 角色名称(模糊查询)
+          in: query
+          name: name
+          type: string
       responses:
         "200":
           description: 查询结果：{list:列表数据,pagination:{current:页索引,pageSize:页大小,total:总数量}}
@@ -1065,20 +1065,20 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询数据
       tags:
-      - 角色管理
+        - 角色管理
     post:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 创建数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Role'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 创建数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Role'
+            type: object
       responses:
         "200":
           description: OK
@@ -1098,14 +1098,14 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 创建数据
       tags:
-      - 角色管理
+        - 角色管理
   /api/v1/roles.select:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
       responses:
         "200":
           description: 查询结果：{list:角色列表}
@@ -1127,19 +1127,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询选择数据
       tags:
-      - 角色管理
+        - 角色管理
   /api/v1/roles/{id}:
     delete:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -1155,18 +1155,18 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 删除数据
       tags:
-      - 角色管理
+        - 角色管理
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: OK
@@ -1186,25 +1186,25 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询指定数据
       tags:
-      - 角色管理
+        - 角色管理
     put:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: 更新数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.Role'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: 更新数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.Role'
+            type: object
       responses:
         "200":
           description: OK
@@ -1224,42 +1224,42 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 更新数据
       tags:
-      - 角色管理
+        - 角色管理
   /api/v1/users:
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - default: 1
-        description: 分页索引
-        in: query
-        name: current
-        required: true
-        type: integer
-      - default: 10
-        description: 分页大小
-        in: query
-        name: pageSize
-        required: true
-        type: integer
-      - description: 用户名(模糊查询)
-        in: query
-        name: userName
-        type: string
-      - description: 真实姓名(模糊查询)
-        in: query
-        name: realName
-        type: string
-      - description: 角色ID(多个以英文逗号分隔)
-        in: query
-        name: roleIDs
-        type: string
-      - description: 状态(1:启用 2:停用)
-        in: query
-        name: status
-        type: integer
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - default: 1
+          description: 分页索引
+          in: query
+          name: current
+          required: true
+          type: integer
+        - default: 10
+          description: 分页大小
+          in: query
+          name: pageSize
+          required: true
+          type: integer
+        - description: 用户名(模糊查询)
+          in: query
+          name: userName
+          type: string
+        - description: 真实姓名(模糊查询)
+          in: query
+          name: realName
+          type: string
+        - description: 角色ID(多个以英文逗号分隔)
+          in: query
+          name: roleIDs
+          type: string
+        - description: 状态(1:启用 2:停用)
+          in: query
+          name: status
+          type: integer
       responses:
         "200":
           description: 查询结果：{list:列表数据,pagination:{current:页索引,pageSize:页大小,total:总数量}}
@@ -1277,20 +1277,20 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询数据
       tags:
-      - 用户管理
+        - 用户管理
     post:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 创建数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.User'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 创建数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.User'
+            type: object
       responses:
         "200":
           description: OK
@@ -1310,19 +1310,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 创建数据
       tags:
-      - 用户管理
+        - 用户管理
   /api/v1/users/{id}:
     delete:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -1338,18 +1338,18 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 删除数据
       tags:
-      - 用户管理
+        - 用户管理
     get:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: OK
@@ -1369,25 +1369,25 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 查询指定数据
       tags:
-      - 用户管理
+        - 用户管理
     put:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: 更新数据
-        in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/schema.User'
-          type: object
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: 更新数据
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/schema.User'
+            type: object
       responses:
         "200":
           description: OK
@@ -1407,19 +1407,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 更新数据
       tags:
-      - 用户管理
+        - 用户管理
   /api/v1/users/{id}/disable:
     patch:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -1435,19 +1435,19 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 禁用数据
       tags:
-      - 用户管理
+        - 用户管理
   /api/v1/users/{id}/enable:
     patch:
       parameters:
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
-        type: string
-      - description: 记录ID
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: Bearer 用户令牌
+          in: header
+          name: Authorization
+          type: string
+        - description: 记录ID
+          in: path
+          name: id
+          required: true
+          type: string
       responses:
         "200":
           description: '{status:OK}'
@@ -1463,8 +1463,8 @@ paths:
             $ref: '#/definitions/schema.HTTPError'
       summary: 启用数据
       tags:
-      - 用户管理
+        - 用户管理
 schemes:
-- http
-- https
+  - http
+  - https
 swagger: "2.0"

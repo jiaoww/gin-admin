@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/LyricTian/gin-admin/internal/app/errors"
-	"github.com/LyricTian/gin-admin/internal/app/ginplus"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/errors"
+	"github.com/jiaoww/gin-admin/internal/app/ginplus"
 )
 
 // NoMethodHandler 未找到请求方法的处理函数

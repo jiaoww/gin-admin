@@ -99,11 +99,11 @@ func fillExpandedSQL(info *TraceInfo, db *C.sqlite3, pStmt unsafe.Pointer) {
 //export traceCallbackTrampoline
 func traceCallbackTrampoline(
 	traceEventCode C.uint,
-	// Parameter named 'C' in SQLite docs = Context given at registration:
+// Parameter named 'C' in SQLite docs = Context given at registration:
 	ctx unsafe.Pointer,
-	// Parameter named 'P' in SQLite docs (Primary event data?):
+// Parameter named 'P' in SQLite docs (Primary event data?):
 	p unsafe.Pointer,
-	// Parameter named 'X' in SQLite docs (eXtra event data?):
+// Parameter named 'X' in SQLite docs (eXtra event data?):
 	xValue unsafe.Pointer) C.int {
 
 	eventCode := uint32(traceEventCode)

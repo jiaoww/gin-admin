@@ -1893,7 +1893,7 @@ func rgetResolveSFI(rt reflect.Type, x []structFieldInfo, pv *typeInfoLoadArray)
 			index := uint16(sa[j+len(sn)+1]) | uint16(sa[j+len(sn)])<<8
 			// one of them must be cleared (reset to nil),
 			// and the index updated appropriately
-			i2clear := ui                // index to be cleared
+			i2clear := ui // index to be cleared
 			if x[i].nis < x[index].nis { // this one is shallower
 				// update the index to point to this later one.
 				sa[j+len(sn)], sa[j+len(sn)+1] = byte(ui>>8), byte(ui)

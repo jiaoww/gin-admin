@@ -1,10 +1,10 @@
 package ctl
 
 import (
-	"github.com/LyricTian/gin-admin/internal/app/bll"
-	"github.com/LyricTian/gin-admin/internal/app/ginplus"
-	"github.com/LyricTian/gin-admin/internal/app/schema"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/bll"
+	"github.com/jiaoww/gin-admin/internal/app/ginplus"
+	"github.com/jiaoww/gin-admin/internal/app/schema"
 )
 
 // NewRole 创建角色管理控制器

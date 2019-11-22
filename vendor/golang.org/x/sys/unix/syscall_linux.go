@@ -1604,7 +1604,7 @@ func Vmsplice(fd int, iovs []Iovec, flags int) (int, error) {
 //sys	faccessat(dirfd int, path string, mode uint32) (err error)
 
 func Faccessat(dirfd int, path string, mode uint32, flags int) (err error) {
-	if flags & ^(AT_SYMLINK_NOFOLLOW|AT_EACCESS) != 0 {
+	if flags & ^(AT_SYMLINK_NOFOLLOW | AT_EACCESS) != 0 {
 		return EINVAL
 	}
 

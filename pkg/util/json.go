@@ -1,7 +1,7 @@
 package util
 
 import (
-	jsoniter "github.com/json-iterator/go"
+	"github.com/json-iterator/go"
 )
 
 // 定义JSON操作

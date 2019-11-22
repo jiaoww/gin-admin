@@ -1,11 +1,11 @@
 package ctl
 
 import (
-	"github.com/LyricTian/gin-admin/internal/app/bll"
-	"github.com/LyricTian/gin-admin/internal/app/ginplus"
-	"github.com/LyricTian/gin-admin/internal/app/schema"
-	"github.com/LyricTian/gin-admin/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/bll"
+	"github.com/jiaoww/gin-admin/internal/app/ginplus"
+	"github.com/jiaoww/gin-admin/internal/app/schema"
+	"github.com/jiaoww/gin-admin/pkg/util"
 )
 
 // NewMenu 创建菜单管理控制器

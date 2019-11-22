@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/LyricTian/gin-admin/internal/app"
-	"github.com/LyricTian/gin-admin/pkg/logger"
-	"github.com/LyricTian/gin-admin/pkg/util"
+	"github.com/jiaoww/gin-admin/internal/app"
+	"github.com/jiaoww/gin-admin/pkg/logger"
+	"github.com/jiaoww/gin-admin/pkg/util"
 )
 
 // VERSION 版本号，

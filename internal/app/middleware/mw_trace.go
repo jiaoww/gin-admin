@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"github.com/LyricTian/gin-admin/internal/app/ginplus"
-	"github.com/LyricTian/gin-admin/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/jiaoww/gin-admin/internal/app/ginplus"
+	"github.com/jiaoww/gin-admin/pkg/util"
 )
 
 // TraceMiddleware 跟踪ID中间件

@@ -11,12 +11,30 @@
     "router": "/example/demo",
     "sequence": 1800000,
     "actions": [
-      { "code": "add", "name": "新增" },
-      { "code": "edit", "name": "编辑" },
-      { "code": "del", "name": "删除" },
-      { "code": "query", "name": "查询" },
-      { "code": "disable", "name": "禁用" },
-      { "code": "enable", "name": "启用" }
+      {
+        "code": "add",
+        "name": "新增"
+      },
+      {
+        "code": "edit",
+        "name": "编辑"
+      },
+      {
+        "code": "del",
+        "name": "删除"
+      },
+      {
+        "code": "query",
+        "name": "查询"
+      },
+      {
+        "code": "disable",
+        "name": "禁用"
+      },
+      {
+        "code": "enable",
+        "name": "启用"
+      }
     ],
     "resources": [
       {
@@ -74,10 +92,22 @@
         "router": "/system/menu",
         "sequence": 1190000,
         "actions": [
-          { "code": "add", "name": "新增" },
-          { "code": "edit", "name": "编辑" },
-          { "code": "del", "name": "删除" },
-          { "code": "query", "name": "查询" }
+          {
+            "code": "add",
+            "name": "新增"
+          },
+          {
+            "code": "edit",
+            "name": "编辑"
+          },
+          {
+            "code": "del",
+            "name": "删除"
+          },
+          {
+            "code": "query",
+            "name": "查询"
+          }
         ],
         "resources": [
           {
@@ -118,10 +148,22 @@
         "router": "/system/role",
         "sequence": 1180000,
         "actions": [
-          { "code": "add", "name": "新增" },
-          { "code": "edit", "name": "编辑" },
-          { "code": "del", "name": "删除" },
-          { "code": "query", "name": "查询" }
+          {
+            "code": "add",
+            "name": "新增"
+          },
+          {
+            "code": "edit",
+            "name": "编辑"
+          },
+          {
+            "code": "del",
+            "name": "删除"
+          },
+          {
+            "code": "query",
+            "name": "查询"
+          }
         ],
         "resources": [
           {
@@ -168,12 +210,30 @@
         "router": "/system/user",
         "sequence": 1170000,
         "actions": [
-          { "code": "add", "name": "新增" },
-          { "code": "edit", "name": "编辑" },
-          { "code": "del", "name": "删除" },
-          { "code": "query", "name": "查询" },
-          { "code": "disable", "name": "禁用" },
-          { "code": "enable", "name": "启用" }
+          {
+            "code": "add",
+            "name": "新增"
+          },
+          {
+            "code": "edit",
+            "name": "编辑"
+          },
+          {
+            "code": "del",
+            "name": "删除"
+          },
+          {
+            "code": "query",
+            "name": "查询"
+          },
+          {
+            "code": "disable",
+            "name": "禁用"
+          },
+          {
+            "code": "enable",
+            "name": "启用"
+          }
         ],
         "resources": [
           {
